@@ -33,7 +33,9 @@ branches:
   only: master
 
 env:
+    - ARCH=x86
+    - ARCH=arm
   global:
-    - PUSH_BRANCH=gh-pages
+    - PUSH_BRANCH=deploy
     - DOCKER_TAG=aur-build
     - REPO_NAME=build
