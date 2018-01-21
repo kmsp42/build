@@ -1,0 +1,80 @@
+[submodule "archiso-git"]
+	path = archiso-git
+	url = https://aur.archlinux.org/archiso-git.git
+	branch = master
+[submodule "dkms-sorted"]
+	path = dkms-sorted
+	url = https://aur.archlinux.org/dkms-sorted.git
+	branch = master
+[submodule "ruby-backports"]
+	path = ruby-backports
+	url = https://aur.archlinux.org/ruby-backports.git
+	branch = master
+[submodule "ruby-ethon"]
+	path = ruby-ethon
+	url = https://aur.archlinux.org/ruby-ethon.git
+	branch = master
+[submodule "ruby-gh"]
+	path = ruby-gh
+	url = https://aur.archlinux.org/ruby-gh.git
+	branch = master
+[submodule "ruby-highline"]
+	path = ruby-highline
+	url = https://aur.archlinux.org/ruby-highline.git
+	branch = master
+[submodule "ruby-json"]
+	path = ruby-json
+	url = https://aur.archlinux.org/ruby-json.git
+	branch = master
+[submodule "ruby-launchy"]
+	path = ruby-launchy
+	url = https://aur.archlinux.org/ruby-launchy.git
+	branch = master
+[submodule "ruby-net-http-persistent"]
+	path = ruby-net-http-persistent
+	url = https://aur.archlinux.org/ruby-net-http-persistent.git
+	branch = master
+[submodule "ruby-net-http-pipeline"]
+	path = ruby-net-http-pipeline
+	url = https://aur.archlinux.org/ruby-net-http-pipeline.git
+	branch = master
+[submodule "ruby-pusher-client"]
+	path = ruby-pusher-client
+	url = https://aur.archlinux.org/ruby-pusher-client.git
+	branch = master
+[submodule "ruby-travis"]
+	path = ruby-travis
+	url = https://aur.archlinux.org/ruby-travis.git
+	branch = master
+[submodule "ruby-typhoeus-0.6"]
+	path = ruby-typhoeus-0.6
+	url = https://aur.archlinux.org/ruby-typhoeus-0.6.git
+	branch = master
+[submodule "ruby-websocket"]
+	path = ruby-websocket
+	url = https://aur.archlinux.org/ruby-websocket.git
+	branch = master
+[submodule "salt-git"]
+	path = salt-git
+	url = https://aur.archlinux.org/salt-git.git
+	branch = master
+[submodule "spl-linux-hardened-git"]
+	path = spl-linux-hardened-git
+	url = https://aur.archlinux.org/spl-linux-hardened-git.git
+	branch = master
+[submodule "spl-utils-common-git"]
+	path = spl-utils-common-git
+	url = https://aur.archlinux.org/spl-utils-common-git.git
+	branch = master
+[submodule "zfs-auto-snapshot-git"]
+	path = zfs-auto-snapshot-git
+	url = https://aur.archlinux.org/zfs-auto-snapshot-git.git
+	branch = master
+[submodule "zfs-linux-hardened-git"]
+	path = zfs-linux-hardened-git
+	url = https://aur.archlinux.org/zfs-linux-hardened-git.git
+	branch = master
+[submodule "zfs-utils-common-git"]
+	path = zfs-utils-common-git
+	url = https://aur.archlinux.org/zfs-utils-common-git.git
+	branch = master
