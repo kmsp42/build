@@ -1,0 +1,39 @@
+sudo: required
+
+services:
+  - docker
+
+cache:
+  directories:
+    - repo/
+
+before_install:
+  # - openssl aes-256-cbc -K <key> -iv <IV> -in secrets.tar.gz.enc -out secrets.tar.gz -d
+  secure: "ZR3S8RQITcWE8FKsylbirMfXLpn87lboRCSP3Uec6ZwJ3P1ymZmK5eKHO2Zv3hKqlPba0oQ8KiKUZGe5Fa660GAjsgBWPX+6YTNDS1dWY5AaBGt6nYuAvIsjdoUT3arRpqK/m3nYoi71CuORmyfhyIudXocd3mCTrFZ2DXgtEdXFz/UJy9HkcHmfCltXQGNNBJCVDzHrP5EOrv2X2BGUmXOCGMa3znkcI/NAVFW5rRrZkSQyu+Z4WSfrRuedOskaNHooyEQxNctDSdpg6/YMJmtQD/go0dOh/1P4pYHdECsW3gMh4pADdAetQw/CIUxRuJpmrHAEoVBHjiFfFJ9Ha3MpG4rkh3LeUzp3svRclplbOQM34Q2fauoYY+jjhRF9xfOVzhnd1nw1jt713shw3RIb8aCuptUhzV4y5KxSlSBGHyAQh6wZvOUTBcFlkohCNoQDbfj9vPc2kmC23BuBDY4jFIvDtUomFqRXBLAD0/5iqGfNj91Sjbaym5fx7J2maksWsUtTx8c79Lnhf2quRC8b6ySq/SUAglAaAzKxJ3WrMNgz+/rwUQ7lJ75Ej0RPCtttDTdLowN2HGlfjrCi5+bPzZnXK7xD56Agc8Ga1wk9GzwUJox8f/8MC3ulUkJa1sdGGjDJKGEqfo76n3Is9yw4xIffHx3Bi+SlfcHw9uI="
+  - tar xvfz secrets.tar.gz
+  - chmod 600 deploy_key
+  - docker build --build-arg USER_ID="$(id -u)" -t "$DOCKER_TAG" docker/
+
+script:
+  - docker run -e REPO_NAME="$REPO_NAME" -v "$PWD":/home/builder/aur-build "$DOCKER_TAG"
+
+deploy:
+  provider: script
+  script: ./deploy.sh
+  skip_cleanup: true
+  on:
+    branch: master
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+
+branches:
+  only: master
+
+env:
+  global:
+    - PUSH_BRANCH=gh-pages
+    - DOCKER_TAG=aur-build
+    - REPO_NAME=build
