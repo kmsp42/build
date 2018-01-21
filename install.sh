@@ -9,7 +9,7 @@ AUTO_GPG='gpg --batch --no-tty --yes'
 
 if [ -z "$REPO_NAME" ]
 then
-	REPO_NAME=local
+	REPO_NAME=build
 fi
 
 export GPGKEY="$sign_key"
