@@ -78,3 +78,11 @@
 	path = zfs-utils-common-git
 	url = https://aur.archlinux.org/zfs-utils-common-git.git
 	branch = master
+[submodule "spl-linux-hardened-git-headers"]
+	path = spl-linux-hardened-git-headers
+	url = https://aur.archlinux.org/spl-linux-hardened-git-headers.git
+	branch = master
+[submodule "zfs-linux-hardened-git-headers"]
+	path = zfs-linux-hardened-git-headers
+	url = https://aur.archlinux.org/zfs-linux-hardened-git-headers.git
+	branch = master
