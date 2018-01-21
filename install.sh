@@ -30,7 +30,7 @@ then
 	SIGNING_ARGS="--sign"
 fi
 
-$AUTO_GPG --recv-keys "${trustedpgpkeys[@]}"
+$AUTO_GPG --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys "${trustedpgpkeys[@]}"
 for k in "${trustedpgpkeys[@]}"
 do
 	$AUTO_GPG --lsign-key "$k" || :
